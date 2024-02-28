@@ -5,15 +5,15 @@
   
 ## Main Config
 ### Seed
-- `seed = 4585` : Seed it to plant.
+- `seed = 4585` : Seed id to plant.
 
 ### Storage Seed
 - `storage = {"Storage1|DoorId1","Storage2|DoorId2"}` : Support Multiple World & Multiple Door ID.
   
 ### Farmlist
 - `farmList = {"x","x","x"}` : Write `"farm|doorId"` if using multiple door.
-- `doorfarmList = "x"` -- id door world farm (ignore this variable if using multiple door).
-- `multiplebot = false` -- multiple bot at 1 world.
+- `doorfarmList = "x"` : id door world farm (ignore this variable if using multiple door).
+- `multiplebot = false` : multiple bot at 1 world.
   
   **Multiple Plant :**
   ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/ee53af8a-c14c-4401-b8af-002682f6870e)
@@ -68,4 +68,4 @@
 - `webhookstatuslink = "x"` : Write ur webhook link here to info about ur bot status.
   
 - `linkbotinfo = "x"` : Webhook link to info about ur bot & storage.
-- `messageidbotinfo = {"x","x","x"}` -- message id webhook, 1 message per bot
+- `messageidbotinfo = {"x","x","x"}` : message id webhook, 1 message per bot
