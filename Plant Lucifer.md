@@ -1,13 +1,11 @@
-# Main Config
+# Rotation Multibot Script Version 2.07
 
-##itemId
 
-If u moving more than 1 items, then write :
-```lua
-itemId = {1,2,3,4,5}
+## PROXY SETTINGS
+- `Add_Proxy`: To add a proxy [Options: yes or no]
+- `Proxy_Limit`: Fill in with number [Bot/Proxy]
+### Example
 ```
-If moving only 1 item, then write :
-```lua
-itemId = {1}
+Proxy_Limit = 2 
+which means 2 Bot / 1 Proxy
 ```
-anjeng
