@@ -42,7 +42,7 @@
 - `looping = false` : Set to true if looping take (Nonstop Plant).
 
 ### Remove Bot mode
-- `removingBot = false` : Set to true if removing bot after all take storage are empty / all drop storage are limit.
+- `removingBot = false` : Set to true if removing bot after all take storage are empty.
 
 ### Splice mode
 - `splice, seedsplice = false, 1` : set true to splice plant, then write seed splice.
