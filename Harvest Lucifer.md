@@ -45,7 +45,7 @@
 
 ### Storage Seed
 - `storageseed = {"world1|door1","world2|door2","world3|door3"}` : Support Multiple World & Multiple Door ID.
-- `limitseed = 10000` limit seed each storage.
+- `limitseed = 10000` : limit seed each storage.
 - `amountseed = 150` : limit seed when harvest to storing.
 - `dropseedX, dropseedY = 80, 24` : using real growtopia coordinate.
 ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/1e2802e0-daae-4124-b9be-2cf14eea8861)
@@ -151,9 +151,23 @@ Bot 3 switching on bot "g","h","i".
 ```
 ### Proxy Config
 
-- `withproxy, botperproxy = false, 1` : set true to using proxy, then setting limit bot per proxy
+- `withproxy, botperproxy = false, 1` : set true to using proxy, then setting limit bot per proxy/
 - `proxyList = {
+    "ip:port:user:pass",
+    "ip:port:user:pass",
+    "ip:port:user:pass"
+}` : Proxy list
+```
+  Example (Using 15 bots switch and 5 bot per proxy) :
+
+  withproxy, botperproxy = true, 5
+  proxyList = {
     "123.45.678:1000:caramoy:caramoy",
     "123.45.678:1001:caramoy:caramoy",
     "123.45.678:1002:caramoy:caramoy",
-}`
+  }
+
+  Bot 1 - 5 : "123.45.678:1000:caramoy:caramoy"
+  Bot 6 - 10 : "123.45.678:1001:caramoy:caramoy"
+  Bot 11 - 15 : "123.45.678:1002:caramoy:caramoy"
+```
