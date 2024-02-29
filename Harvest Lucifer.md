@@ -65,6 +65,7 @@
   debug = "surg_value_pack" : debug pack.
   mingems = 45500 : minimum gems to buying pack.
   pricepack = 45000 : price pack at store.
+  ```
 ### Storage Pack
 - `storagepack = {"x|x","x|x","x|x"}` : Support Multiple World & Multiple Door ID.
 - `limitpack = 10000` : limit pack each storage
