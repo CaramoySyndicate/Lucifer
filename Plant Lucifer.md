@@ -10,32 +10,18 @@
 ### Storage Seed
 - `storage = {"Storage1|DoorId1","Storage2|DoorId2"}` : Support Multiple World & Multiple Door ID.
   
-### Farmlist
-- `farmList = {"x","x","x"}` : Write `"farm|doorId"` if using multiple door.
-- `doorfarmList = "x"` : id door world farm (ignore this variable if using multiple door).
-- `multiplebot = false` : multiple bot at 1 world.
+### worldFile
+- `worldFile = "urworlds.txt"` : **How to make worldList via file?**
   
-  **Multiple Plant :**
-  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/ee53af8a-c14c-4401-b8af-002682f6870e)
+`Step 1 :` **Open lucifer file, then click right (PC) / hold tap (Smartphone) until this notification appears.**
+  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/89095810-6750-4e60-8d6b-a27376d484f8)
 
-  **Single Plant (Planting on 15 tile, more showcase at server) :**
-  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/ca3c492f-67a0-4dff-8669-f4410ac26698)
-  
-- `worldperbot = 1` : world each bot, auto spread.
+`Step 2 :` **Rename file by urself.**
+  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/9f99db31-e7f0-4324-9ee5-250e6579ff47)
 
-  ```
-  Example :
+`Step 3 :` **Write ur worldlist on file, WORLD|DOOR**
+![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/e9a6b755-ea16-477a-b864-febb4a7dddfe)
 
-  farmList = {"a","b","c","d","e","f","g","h"}
-  doorfarmList = "test"
-  multiplebot = false
-  worldperbot = 2
-
-  Bot 1 planting at world a,b.
-  Bot 2 planting at world c,d.
-  Bot 3 planting at world e,f.
-  Bot 4 planting at world g,h.
-  ```
 ## Features
 
 ### Looping mode
