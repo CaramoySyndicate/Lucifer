@@ -1,4 +1,4 @@
-# Auto Plant Version 0.2
+# Auto Plant Version 0.3
 
 - `moveRange = 5` : Bot skip 5 tile every findPath.
 - `moveInterval = 120` : Delay move interval.
