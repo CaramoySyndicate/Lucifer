@@ -1,4 +1,4 @@
-# Auto Harvest Version 0.2
+# Auto Harvest Version 0.3
 
 - `moveRange = 5` : Bot skip 5 tile every findPath.
 - `moveInterval = 120` : Delay move interval.
@@ -7,34 +7,18 @@
 ### Block
 - `block = 4585` : Block Id Farmable to harvest.
 
-### Farmlist
-- `farmList = {"farm1","farm2","farm3"}` : Write `"farm|doorId"` if using multiple door.
-- `doorfarmList = "doorId"` : id door world farm (ignore this variable if using multiple door).
-- `multiplebot = false` : multiple bot at 1 world.
+### worldFile
+- `worldFile = "urworlds.txt"` : **How to make worldList via file?**
   
-  **Multiple Harvest :**
-  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/76a9c182-e46f-40b9-90eb-0007a14c4383)
+`Step 1 :` **Open lucifer file, then click right (PC) / hold tap (Smartphone) until this notification appears.**
+  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/89095810-6750-4e60-8d6b-a27376d484f8)
 
+`Step 2 :` **Rename file by urself.**
+  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/9f99db31-e7f0-4324-9ee5-250e6579ff47)
 
-  **Single Harvest (Harvesting on 15 tile, more showcase at server) :**
-  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/49a16fa6-5be8-4f77-b9fb-651ba932e03b)
+`Step 3 :` **Write ur worldlist on file, WORLD|DOOR**
+![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/e9a6b755-ea16-477a-b864-febb4a7dddfe)
 
-  
-- `worldperbot = 1` : world each bot, auto spread.
-
-  ```
-  Example :
-
-  farmList = {"a","b","c","d","e","f","g","h"}
-  doorfarmList = "test"
-  multiplebot = false
-  worldperbot = 2
-
-  Bot 1 harvesting at world a,b.
-  Bot 2 harvesting at world c,d.
-  Bot 3 harvesting at world e,f.
-  Bot 4 harvesting at world g,h.
-  ```
  ## Storage
  ### Storage Block
 - `storageblock = {"world1|door1","world2|door2","world3|door3"}` : Support Multiple World & Multiple Door ID.
@@ -73,11 +57,11 @@
 ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/1e2802e0-daae-4124-b9be-2cf14eea8861)
 ## Special event
 
-- `itemevent = {1,2,3,4,5}` : item id special event
-- `wearitem = false` : set true to wear item, like using magnifience at harvest festival
-- `idwearitem = 1` : item id to wear
-- `amount = 1` : limit item event when harvest to storing.
-- `keep = 1` : after take & wear special event item like magnifience, The bot drops items and leaves an amount according to this variable.
+- `eventList = {1,2,3,4,5}` : item id special event
+- `wearingItemSupport = false` : set true to wear item, like using magnifience at harvest festival
+- `idItemSupport = 1` : item id to wear
+- `amountEvent = 1` : limit item event when harvest to storing.
+- `keepItemSupport = 1` : after take & wear special event item like magnifience, The bot drops items and leaves an amount according to this variable.
 - `worldwearitem = {"world|door"}` : World take special event item to wear
 
 - `storageevent = {"world1|door1","world2|door2","world3|door3"}` : Support Multiple World & Multiple Door ID.
@@ -123,33 +107,7 @@
 - `typeaccount = "normal"` : choose "normal" / "guest" to switch.
 ### Letter name guest
 - `lettername = 10` : set letter name if use guest.
-### Bot per-switch
-- `botperswitch = 3` : limit bot perswitch.
-- `botSwitch = {
-    "user|pass",
-    "user|pass",
-    "user|pass"
-}` : normal ["user|pass"] or guest ["mac|rid"].
-```
-Example (Using 3 bots) :
-
-botperswitch = 3
-botSwitch = {
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i"
-}
-
-Bot 1 switching on bot "a","b","c".
-Bot 2 switching on bot "d","e","f".
-Bot 3 switching on bot "g","h","i".
-```
+- `switchFile = "switch.txt"` : same as worldFile 
 ### Proxy Config
 
 - `withproxy, botperproxy = false, 1` : set true to using proxy, then setting limit bot per proxy/
