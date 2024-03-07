@@ -1,4 +1,4 @@
-# Auto PNB Version 0.3
+# Auto PNB Version 0.4
 
 ## Main Config
 - `block = 4584` : Block farmable item id to Pnb.
@@ -16,29 +16,28 @@
 ## PNB Other Config
 
 - `pnbother = false` : set true to pnbother
-- `customWorldPnb = {"worldpnb1","worldpnb2","worldpnb3"}` : world list to pnb
-- `doorWorldPnb = "doorPnb"` : door id world pnb
-- `worldPerbotPnb = 3` : bot auto arrange
+- `useCustomPnb = false` : set true if using custom world to pnb
+- `worldFile = "world.txt"` : ur custom world must be same or more than total ur bot
 
-```
-Example (Using 3 bots) :
+**How to make worldList via file?**
+  
+`Step 1 :` **Open lucifer file, then click right (PC) / hold tap (Smartphone) until this notification appears.**
+  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/89095810-6750-4e60-8d6b-a27376d484f8)
 
-customWorldPnb = {"World1","World2","World3","World4","World5","World6","World7","World8","World9","World10","World11","World12","World13","World14","World15",}
-doorWorldPnb = "doorPnb"
-worldPerbotPnb = 5
+`Step 2 :` **Rename file by urself.**
+  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/9f99db31-e7f0-4324-9ee5-250e6579ff47)
 
-Bot 1 pnb on world1 - world5
-Bot 2 pnb on world6 - world10
-Bot 3 pnb on world11 - world15
+`Step 3 :` **Write ur worldlist on file, WORLD|DOOR**
+![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/e9a6b755-ea16-477a-b864-febb4a7dddfe)
 
-Every pnb or block at backpack are empty, bot taking block then warp to next world
+- `useFreshPnb = false` : set true to generating world for pnb
+- `worldLetter = 10` : total letter to generate
+- `worldJammer = {"urworld|urdoorId"}` : if using fresh pnb, bot must have jammer
 
-Bot 1 > Pnb on world1 > block at backpack are empty > bot 1 taking blocks > pnb on world2 (Repeat until bot 1 joining on world5)
+- `takeBackJammer = false` : set true to tack back jammer if bot condition are suspend or any trouble
+- `dropJammerX, dropJammerY = 80,24` : using real growtopia coordinate
+![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/1e2802e0-daae-4124-b9be-2cf14eea8861)
 
-after joining last world (world5), bot 1 will joining world 1 again, then pnb.
-
-NOTE : Why worldPerbotPnb = 5? cuz u are using 15 worlds and 3 bots, 15 : 3 = 5.
-```
 - `posBreakX,posBreakY = 80, 24` : using real growtopia coordinate
 ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/1e2802e0-daae-4124-b9be-2cf14eea8861)
 
@@ -52,7 +51,7 @@ NOTE : Why worldPerbotPnb = 5? cuz u are using 15 worlds and 3 bots, 15 : 3 = 5.
 - `amountseed = 100` : amount seed at bot backpack when pnb to storing
 - `limitseed = 10000` : limit seed each storage.
   
-- `dropseedX, dropseedY = 22, 20` : using real growtopia coordinate
+- `dropseedX, dropseedY = 80, 24` : using real growtopia coordinate
 ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/1e2802e0-daae-4124-b9be-2cf14eea8861)
 
 ## Pack Config
@@ -79,6 +78,7 @@ NOTE : Why worldPerbotPnb = 5? cuz u are using 15 worlds and 3 bots, 15 : 3 = 5.
 ## Features
   
 - `autoSkipQuest = false` : set true to skip quest
+- `whitelistItem = {98,1,1,1,1}` : item list to not trash
 
 - `pnbOn25Tile = false` : set true to enable pnb 25 tile (5x5)
  ![image](https://github.com/CaramoySyndicate/Lucifer/assets/161619991/ac42e7cd-586a-4dab-9197-e4b12b91dfef)
@@ -94,8 +94,6 @@ NOTE : Why worldPerbotPnb = 5? cuz u are using 15 worlds and 3 bots, 15 : 3 = 5.
 - `separated = false` : set true to separating drop
 - `sayingrandomwords = false` : set true to enable saying random words before pnb
 - `changeSkin = false` : set true to enable change skin
-
-- `whitelistItem = {98,1,1,1,1}` : item list to not trash
 
 ## REST
 - `botRest = false` : set true to auto rest
@@ -136,33 +134,9 @@ NOTE : Why worldPerbotPnb = 5? cuz u are using 15 worlds and 3 bots, 15 : 3 = 5.
 
 ### Letter name guest
 - `lettername = 10` : set letter name if use guest.
-### Bot per-switch
-- `botperswitch = 3` : limit bot perswitch.
-- `botSwitch = {
-    "user|pass",
-    "user|pass",
-    "user|pass"
-}` : normal ["user|pass"] or guest ["mac|rid"].
-```
-Example (Using 3 bots) :
 
-botperswitch = 3
-botSwitch = {
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i"
-}
-
-Bot 1 switching on bot "a","b","c".
-Bot 2 switching on bot "d","e","f".
-Bot 3 switching on bot "g","h","i".
-```
+### file for switch
+- `switchFile = "switch.txt"` : same as worldFile 
 ### Proxy Config
 
 - `withproxy, botperproxy = false, 1` : set true to using proxy, then setting limit bot per proxy/
