@@ -1,4 +1,4 @@
-# Auto Move WTW Version 0.2
+# Auto Move WTW Final Version 0.1
 
 
 ## Main Config
